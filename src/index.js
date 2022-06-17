@@ -18,20 +18,23 @@ import Icon from './icon.png';
 
 
 
-//======================HEADER ELEMENTS============================//
-  const header = document.createElement('header')
-  const homeBtn = document.createElement('button')
-  homeBtn.textContent = 'Home'
-  const aboutBtn = document.createElement('button')
-  aboutBtn.textContent = 'About'
-  const contactBtn = document.createElement('button')
-  contactBtn.textContent = 'Contact'
+//======================HEADER ELEMENTS============================//np
+  const navbar = document.createElement('nav')
+  const homeLink = document.createElement('a')
+  homeLink.href = '#home'
+  homeLink.textContent = 'Home'
+  const menuLink = document.createElement('a')
+  menuLink.href = '#menu'
+   menuLink.textContent = 'Menu'
+  const contactLink = document.createElement('a')
+  contactLink.href = '#contact'
+  contactLink.textContent = 'Contact'
 
 //======================SECTION 1 ELEMENTS============================//
 
 
-  const firstSection = document.createElement('div')
-  firstSection.classList.add('first-section')
+  const firstSection = document.createElement('section')
+  firstSection.id = 'home'
   const firstSectionWrapper = document.createElement('div')
   firstSectionWrapper.classList.add('first-section-wrapper')
   const firstSectionTitle = document.createElement('h1')
@@ -47,8 +50,8 @@ import Icon from './icon.png';
 //======================SECTION 2 ELEMENTS============================//
 
 
-  const secondSection = document.createElement('div')
-  secondSection.classList.add('second-section')
+  const secondSection = document.createElement('section')
+  secondSection.id = 'menu'
   const secondSectionWrapper = document.createElement('div')
   secondSectionWrapper.classList.add('second-section-wrapper')
   const secondSectionTitle = document.createElement('h1')
@@ -60,8 +63,8 @@ import Icon from './icon.png';
 //======================SECTION 3 ELEMENTS============================//
 
   
-  const thirdSection = document.createElement('div')
-  thirdSection.classList.add('third-section')
+  const thirdSection = document.createElement('section')
+  thirdSection.id = 'contact'
   const thirdSectionWrapper = document.createElement('div')
   thirdSectionWrapper.classList.add('third-section-wrapper')
   const thirdSectionTitle = document.createElement('h1')
@@ -78,16 +81,12 @@ import Icon from './icon.png';
   footerText.textContent = 'Copyright © 2020'
 
 
-
-
-
 //======================APPENDING ELEMENTS HEADER============================//
 
-  header.appendChild(homeBtn)
-  header.appendChild(aboutBtn)
-  header.appendChild(contactBtn)
-  document.body.appendChild(header)
-
+  navbar.appendChild(homeLink)
+  navbar.appendChild(menuLink)
+  navbar.appendChild(contactLink)
+  document.body.appendChild(navbar)
 
 //======================APPENDING ELEMENTS SECTION 1============================//
 
@@ -124,6 +123,17 @@ import Icon from './icon.png';
 
 
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log("clicked")
+        document.querySelectorAll(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+        });
+    });
+});
+
+
 
 
 
@@ -143,3 +153,6 @@ import Icon from './icon.png';
 
 
   // body.appendChild(container)
+
+
+  
