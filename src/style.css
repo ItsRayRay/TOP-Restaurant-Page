@@ -1,4 +1,56 @@
-.hello {
-    color: red;
-    background: url('./icon.png');
+header {
+    background-color: #d44747;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #d44747;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.first-section-wrapper {
+    background-color: #b47777;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.first-section {
+    background-color: #b47777;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+
+.second-section {
+    background-color: #c42121;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 50vh;
+}
+
+.third-section {
+    background-color: #5a4646;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 50vh;
 }
