@@ -2,6 +2,10 @@ nav {
     background-color: #d44747;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
  a {
@@ -17,7 +21,7 @@ nav {
     flex-direction: column;
 }
 
-#home {
+#home { 
     background-color: #b47777;
     padding: 20px;
     text-align: center;
